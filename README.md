@@ -1,4 +1,4 @@
-# Image-Based Malware Detection
+# F5 Hackfest 2023: Image-Based Malware Detection
 
 This repository contains tools and techniques for detecting image-based malware. Hackers use various techniques to hide malware in images such as appending a string of text to the end of a file which does not change the visual appearance of the image, using image steganography to alter several pixels to embed malicious code and exploit vulnerabilities in image file formats to execute malware. 
 
