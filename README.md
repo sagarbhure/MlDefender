@@ -14,6 +14,13 @@ This project contains the following components:
 - Anti-malware software for image-based malware detection 
 - Documentation best practices for defending against image-based malware 
 
+
+## Dependencies
+
+- python
+- tkinter
+- pillow pil
+
 ## Getting Started
 
 To be filled.
@@ -25,3 +32,10 @@ This project is open to contributions from the community. If you have ideas for 
 ## License
 
 This project is licensed under [insert license].
+
+## Contributers 
+
+
+## Credits
+
+
