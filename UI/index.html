@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLDefender</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="heading">MLDefender</h1>
+    <h3 style="font-family: cursive; text-align: center; font-size: large">
+      Machine Learning Meets Endpoint Defense
+    </h3>
+    <div id="loadingGif" class="loadingGif">
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="centered-div">
+      <img id="output" width="315px" height="200px" class="render-image" />
+      <div class="tabbed-navigation">
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+          <button
+            type="button"
+            class="btn btn-outline-primary button-clicked tabbed-button"
+            data-button="sample"
+            id="sample-button"
+          >
+            Try with Sample Image
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary tabbed-button"
+            data-button="custom"
+            id="custom-button"
+          >
+            <i class="fa-solid fa-cloud-arrow-up"></i> Upload Image
+          </button>
+        </div>
+      </div>
+      <div class="custom-upload-container">
+        <form id="image-form" enctype="multipart/form-data">
+          <input
+            type="file"
+            id="image-input"
+            name="image"
+            accept=".jpg,.jpeg,.png"
+          />
+          <br /><br />
+          <button type="submit" class="button-50" id="submit">Submit</button>
+        </form>
+      </div>
+      <div class="sample-upload-container">
+        <div class="sample-image-group">
+          <h5>Images embedded with malware</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./1_Robotigen.exe.png"
+              >
+                Robotigen
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./2_fakreon.png"
+              >
+                Fakerean
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./3_autorun_k.png"
+              >
+                Autorun
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./4_obfuscated.png"
+              >
+                Obfuscated
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./5_Skintrim.N.png"
+              >
+                Skintrim
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./6_Yuner.A.png"
+              >
+                Yuner
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sample-image-group">
+          <h5>Images embedded with invisible malware</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./12_F5_MW.jpeg"
+              >
+                F5 Logo
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./10_Birds_with_MW.png"
+              >
+                Birds-1
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./9_Birds.jpg"
+              >
+                Birds-2
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./10_Birds_MW.jpeg"
+              >
+                Birds-3
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./12_F5_MW.jpeg"
+              >
+                F5 Logo
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./7_dog_invisible_MW.png"
+              >
+                Dog-1
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./7_Dog_MW.png"
+              >
+                Dog-2
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sample-image-group">
+          <h5>Images without malware</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./1_Retro_Not_MW.png"
+              >
+                Retro
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button
+                class="btn btn-link sample-image"
+                data-image="./7_dog_not_MW.jpg"
+              >
+                Dog-3
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="result"></div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <script src="./script.js"></script>
+</html>
