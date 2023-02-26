@@ -69,5 +69,5 @@ Reach out to the principal researchers if you are interested in supporting this 
 | ------ | ------------------------------------------------------------------------- |
 | UI  | React, HTML, CSS |
 | Backend  | Python |
-|Machine Learning |  
+|Machine Learning Specilist |  
 
