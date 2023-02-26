@@ -5,7 +5,7 @@ excerpt: 'Hackers hide malware in images by appending text to the file, using st
 author: ['Sagar Bhure']
 website: 'https://mldefender.web.app'
 tags: ['Hackfest', 'BIGIP', 'Hyderabad', 'Python', 'Machine Learning', 'Web interface']
-team: ['Sagar Bhure', 'Sourav Kumar Dash', '']
+team: ['Sagar Bhure', 'Sourav Kumar Dash', 'Vamsi Suman K.']
 sponsor: ['Adam Jude']
 mentor: ['Shain Singh']
 ---
