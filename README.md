@@ -6,7 +6,7 @@ author: ['Sagar Bhure']
 website: 'https://mldefender.web.app'
 tags: ['Hackfest', 'BIGIP', 'Hyderabad', 'Python', 'Machine Learning', 'Web interface']
 team: ['Sagar Bhure', 'Sourav Kumar Dash', 'Vamsi Suman K.']
-sponsor: ['Adam Jude']
+sponsor: ['Geng Lin']
 mentor: ['Shain Singh']
 ---
 ## Project Description
